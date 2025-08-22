@@ -1,6 +1,4 @@
-# GSoC_Documentation
-
-# Project Title
+# IYP-BROWSER
 
 - **Organization:** [Internet Health Report]([https://example.org](https://github.com/InternetHealthReport))  
 - **Project:** [IYP-BROWSER]([https://example.org/project](https://github.com/InternetHealthReport/iyp-browser))  
