@@ -2,25 +2,28 @@
 
 # Project Title
 
-- **Organization:** [Organization Name](https://example.org)  
-- **Project:** [Project Name](https://example.org/project)  
-- **Mentors:** Mentor 1, Mentor 2  
-- **Contributor:** Your Name  
-- **GitHub:** [YourUsername](https://github.com/YourUsername)  
-- **LinkedIn:** [Your Name](https://linkedin.com/in/your-link)  
-- **GSoC Proposal:** [Proposal Link](https://link-to-your-proposal)
+- **Organization:** [Internet Health Report]([https://example.org](https://github.com/InternetHealthReport))  
+- **Project:** [IYP-BROWSER]([https://example.org/project](https://github.com/InternetHealthReport/iyp-browser))  
+- **Mentors:** Dimitrios Giakatos, Malte Tashiro  
+- **Contributor:** Ronit Jain  
+- **GitHub:** [Ronit0104123](https://github.com/Ronit0104123)  
+- **LinkedIn:** [Ronit0104123](https://www.linkedin.com/in/ronit-jain0104/)  
+- **GSoC Proposal:** [Proposal Link](https://summerofcode.withgoogle.com/media/user/c5e9511bf17e/proposal/gAAAAABoqKfBSS3f7WYgRjxvP46Q88f6ouAyCcMQKPG5_fZB6jfVt4Byw8h8h9DkHHu1NZbVCzho9DOrvcKBz3HnJrr2jSDbwW8vcUtBLpKxRMWwUVq6yHo=.pdf)
 
 ---
 
-## 1. Project Goals
-The aim of this project is to [short 2–3 line description].  
+## 1. Project Goals  
 
-This project will:  
-- Goal 1  
-- Goal 2  
-- Goal 3  
+The goal of my GSoC project was to enhance the **graph exploration** and **query interface** of the Internet Health Report platform, making it more interactive and user-friendly.  
 
----
+To achieve this, I worked on:  
+
+- **Node Expansion in Graph View** – Allowing users to expand nodes dynamically after clicking, enabling deeper exploration of connected data without rerunning queries.  
+
+- **Intelligent Cypher Query Completion** – Implementing context-aware code completion that suggests only valid node properties and relationships, helping users write accurate queries more easily.  
+
+- **Improved Query Editor Experience** – Enhancing the Cypher editor with auto-adjusting height while maintaining readability by enabling scrolling after a fixed maximum size.  
+
 
 ## 2. Implementation
 The project follows a **[architecture or approach]** for modularity and maintainability.  
