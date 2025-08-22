@@ -23,13 +23,23 @@ To achieve this, I worked on:
 - **Improved Query Editor Experience** – Enhancing the Cypher editor with auto-adjusting height while maintaining readability by enabling scrolling after a fixed maximum size.  
 
 
-## 2. Implementation
-The project follows a **[architecture or approach]** for modularity and maintainability.  
+## 2. Implementation  
 
-Key steps:  
-1. Step one  
-2. Step two  
-3. Step three  
+The project follows a **modular and incremental approach** to add new features to the IYP-Browser, ensuring maintainability and seamless integration with the existing Neo4j-based system.  
+
+### 2.1 Node Expansion / Unexpansion in Graph View  
+
+- Implemented a Cypher query to fetch connected nodes and relationships dynamically:  
+
+```cypher
+MATCH (n)
+WHERE elementId(n) = $nodeId
+MATCH (n)-[r]-(m)
+WITH type(r) AS relType, r, m
+WITH relType, collect({r: r, m: m}) AS connections
+UNWIND connections[..1] AS conn
+RETURN conn.r AS rel, conn.m AS target
+```  
 
 ---
 
