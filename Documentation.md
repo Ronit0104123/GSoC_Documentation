@@ -6,7 +6,7 @@
 - **Contributor:** Ronit Jain  
 - **GitHub:** [Ronit0104123](https://github.com/Ronit0104123)  
 - **LinkedIn:** [Ronit0104123](https://www.linkedin.com/in/ronit-jain0104/)  
-- **GSoC Proposal:** [Proposal Link](https://summerofcode.withgoogle.com/media/user/c5e9511bf17e/proposal/gAAAAABoqKfBSS3f7WYgRjxvP46Q88f6ouAyCcMQKPG5_fZB6jfVt4Byw8h8h9DkHHu1NZbVCzho9DOrvcKBz3HnJrr2jSDbwW8vcUtBLpKxRMWwUVq6yHo=.pdf)
+- **GSoC Proposal:** [Proposal Link]([https://summerofcode.withgoogle.com/media/user/c5e9511bf17e/proposal/gAAAAABoqKfBSS3f7WYgRjxvP46Q88f6ouAyCcMQKPG5_fZB6jfVt4Byw8h8h9DkHHu1NZbVCzho9DOrvcKBz3HnJrr2jSDbwW8vcUtBLpKxRMWwUVq6yHo=.pdf](https://drive.google.com/file/d/12UTzlivJ_dvYWDyHji8hPFaZCVkcXHnt/view?usp=sharing))
 
 ---
 
