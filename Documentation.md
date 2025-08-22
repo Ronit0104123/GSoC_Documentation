@@ -1,7 +1,7 @@
 # IYP-BROWSER
 
-- **Organization:** [Internet Health Report](https://example.org](https://github.com/InternetHealthReport)  
-- **Project:** [IYP-BROWSER](https://example.org/project](https://github.com/InternetHealthReport/iyp-browser)  
+- **Organization:** [Internet Health Report](https://github.com/InternetHealthReport)  
+- **Project:** [IYP-BROWSER](https://github.com/InternetHealthReport/iyp-browser)  
 - **Mentors:** Dimitrios Giakatos, Malte Tashiro  
 - **Contributor:** Ronit Jain  
 - **GitHub:** [Ronit0104123](https://github.com/Ronit0104123)  
