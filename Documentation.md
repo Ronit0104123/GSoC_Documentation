@@ -16,7 +16,7 @@ The goal of my GSoC project was to enhance the **graph exploration** and **query
 
 To achieve this, I worked on:  
 
-- **Node Expansion in Graph View** – Allowing users to expand nodes dynamically after clicking, enabling deeper exploration of connected data without rerunning queries.  
+- **Node Expansion/Unexpansion in Graph View** – Allowing users to expand/unexpand nodes dynamically after clicking, enabling deeper exploration of connected data without rerunning queries.  
 
 - **Intelligent Cypher Query Completion** – Implementing context-aware code completion that suggests only valid node properties and relationships, helping users write accurate queries more easily.  
 
