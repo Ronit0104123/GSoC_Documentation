@@ -5,7 +5,7 @@
 - **Mentors:** Dimitrios Giakatos, Malte Tashiro  
 - **Contributor:** Ronit Jain  
 - **GitHub:** [Ronit0104123](https://github.com/Ronit0104123)  
-- **LinkedIn:** [Ronit0104123](https://www.linkedin.com/in/ronit-jain0104/)  
+- **LinkedIn:** [ronit-jain](https://www.linkedin.com/in/ronit-jain0104/)  
 - **GSoC Proposal:** [Proposal Link](https://drive.google.com/file/d/12UTzlivJ_dvYWDyHji8hPFaZCVkcXHnt/view?usp=sharing)
 
 ---
