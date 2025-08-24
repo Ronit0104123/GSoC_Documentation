@@ -51,16 +51,12 @@ RETURN conn.r AS rel, conn.m AS target
 This feature enhances the query editor in **IYP-Browser** with **intelligent, context-aware autocompletion** for Cypher queries.  
 It uses the **Monaco Editor** for code editing and relies on regex-based parsing + Neo4j schema data to provide relevant suggestions.
 
----
-
-## ✨ Key Features
+## Key Features
 - **Monaco Editor Integration** → Rich editing with syntax highlighting and autocompletion.  
 - **Regex-based Context Detection** → Determines if the user is typing a node, relationship, or property.  
 - **Schema-driven Suggestions** → Only valid **labels, relationships, and properties** are suggested from the Neo4j schema.  
 
----
-
-## 🔍 Regex Patterns Used
+## Regex Patterns Used
 
 The following regex patterns are the core of query context detection:
 
@@ -79,13 +75,13 @@ The following regex patterns are the core of query context detection:
 
 
 
-## 3. Future Work
+## 3. IYP-BROWSER VS NEO4J BROWSER
 - What can be improved  
 - Possible extensions  
 - Long-term impact  
 
 ---
 
-## 4. Resources
+## 4. Merged Pull Requests
 - [GitHub Repo](https://github.com/YourUsername/your-repo)  
 - [Documentation](https://yourusername.github.io/your-repo/)  
