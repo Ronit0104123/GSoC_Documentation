@@ -44,8 +44,6 @@ RETURN conn.r AS rel, conn.m AS target
 
 - Used emits (nodeExpanded, nodeUnexpanded) to sync changes with the parent component without re-rendering the entire graph.
 
----
-
 ### 2.2 Intelligent Cypher Query Completion
 
 This feature enhances the query editor in **IYP-Browser** with **intelligent, context-aware autocompletion** for Cypher queries.  
