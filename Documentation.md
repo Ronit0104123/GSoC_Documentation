@@ -39,7 +39,10 @@ WITH type(r) AS relType, r, m
 WITH relType, collect({r: r, m: m}) AS connections
 UNWIND connections[..1] AS conn
 RETURN conn.r AS rel, conn.m AS target
-```  
+```
+- Added expansion/unexpansion logic in Vue, storing state in expandedNodesMap to track which nodes were expanded and remove only those on unexpansion.
+
+- Used emits (nodeExpanded, nodeUnexpanded) to sync changes with the parent component without re-rendering the entire graph.
 
 ---
 
