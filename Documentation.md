@@ -62,15 +62,14 @@ The following regex patterns are the core of query context detection:
 
 | Regex Pattern | Purpose |
 |---------------|---------|
-| `/(?=MATCH|OPTIONAL MATCH|MERGE)/gi` | Splits query text whenever a new `MATCH`, `OPTIONAL MATCH`, or `MERGE` clause starts. |
+| `/(?=MATCH|OPTIONAL MATCH|MERGE)/gi` | Splits the query whenever a new clause (`MATCH`, `OPTIONAL MATCH`, or `MERGE`) starts. |
 | `/\(\s*\w*\s*:\s*([A-Za-z0-9_]+)/g` | Finds **node labels** inside `(alias:Label)`. |
 | `/\[\s*\w*\s*:\s*([A-Za-z0-9_]+)(?=[\s\]\-]|$)/g` | Finds **relationship types** inside `[alias:TYPE]`. |
-| `/(?:\(\s*\w*\s*:\s*[A-Za-z0-9_]+\s*\{\s*([A-Za-z0-9_]*))|\b([A-Za-z][A-Za-z0-9_]*)\.\s*([A-Za-z0-9_]*)$/` | Detects when user is typing **node properties** (`{ ... }`) or alias-property access (`n.name`). |
-| `/\[\s*\w*\s*:\s*[A-Za-z0-9_]+\s*\{\s*([A-Za-z0-9_]*)$/` | Matches **relationship properties** inside `{ ... }`. |
-| `/\b([A-Za-z][A-Za-z0-9_]*)\.\s*([A-Za-z0-9_]*)$/` | Detects alias-property typing like `a.age`. |
-| `/\(\s*(\w*)\s*:\s*([A-Za-z0-9_]+)/g` | Captures both **alias + label** for nodes `(n:Person)`. |
-| `/\[\s*(\w*)\s*:\s*([A-Za-z0-9_]+)/g` | Captures both **alias + type** for relationships `[r:KNOWS]`. |
-
+| `/(?:\(\s*\w*\s*:\s*[A-Za-z0-9_]+\s*\{\s*([A-Za-z0-9_]*))|\b([A-Za-z][A-Za-z0-9_]*)\.\s*([A-Za-z0-9_]*)$/` | Detects when the user is typing **node properties** inside `{ ... }` or using **alias.property** notation (e.g., `n.name`). |
+| `/\[\s*\w*\s*:\s*[A-Za-z0-9_]+\s*\{\s*([A-Za-z0-9_]*)$/` | Matches **relationship properties** being typed inside `{ ... }`. |
+| `/\b([A-Za-z][A-Za-z0-9_]*)\.\s*([A-Za-z0-9_]*)$/` | Detects **alias-property typing** like `a.age`. |
+| `/\(\s*(\w*)\s*:\s*([A-Za-z0-9_]+)/g` | Captures both **alias + label** for nodes (e.g., `(n:Person)`). |
+| `/\[\s*(\w*)\s*:\s*([A-Za-z0-9_]+)/g` | Captures both **alias + type** for relationships (e.g., `[r:KNOWS]`). |
 ---
 
 
