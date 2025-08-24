@@ -62,7 +62,6 @@ The following regex patterns are the core of query context detection:
 
 | Regex Pattern | Purpose |
 |---------------|---------|
-| `/(?=MATCH||OPTIONAL MATCH|MERGE)/gi` | Splits the query whenever a new clause (`MATCH`, `OPTIONAL MATCH`, or `MERGE`) starts. |
 | `/\(\s*\w*\s*:\s*([A-Za-z0-9_]+)/g` | Finds **node labels** inside `(alias:Label)`. |
 | `/\[\s*\w*\s*:\s*([A-Za-z0-9_]+)(?=[\s\]\-]|$)/g` | Finds **relationship types** inside `[alias:TYPE]`. |
 | `/(?:\(\s*\w*\s*:\s*[A-Za-z0-9_]+\s*\{\s*([A-Za-z0-9_]*))|\b([A-Za-z][A-Za-z0-9_]*)\.\s*([A-Za-z0-9_]*)$/` | Detects when the user is typing **node properties** inside `{ ... }` or using **alias.property** notation (e.g., `n.name`). |
