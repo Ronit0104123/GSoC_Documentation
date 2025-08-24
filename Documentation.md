@@ -48,23 +48,36 @@ RETURN conn.r AS rel, conn.m AS target
 
 ### 2.2 Intelligent Cypher Query Completion
 
-This feature enhances the query editor with context-aware Cypher code suggestions, helping users quickly write valid queries based on the Neo4j schema.
+This feature enhances the query editor in **IYP-Browser** with **intelligent, context-aware autocompletion** for Cypher queries.  
+It uses the **Monaco Editor** for code editing and relies on regex-based parsing + Neo4j schema data to provide relevant suggestions.
 
-Key Features
+---
 
-- Monaco Editor Integration: Provides a rich code editing experience with syntax highlighting and autocompletion.
+## ✨ Key Features
+- **Monaco Editor Integration** → Rich editing with syntax highlighting and autocompletion.  
+- **Regex-based Context Detection** → Determines if the user is typing a node, relationship, or property.  
+- **Schema-driven Suggestions** → Only valid **labels, relationships, and properties** are suggested from the Neo4j schema.  
 
-- Regex-based Context Detection: Determines what the user is currently typing (e.g., inside MATCH, WHERE, or a relationship pattern).
+---
 
-- Schema-driven Suggestions: Autocompletion results are fetched dynamically from the Neo4j schema to ensure only valid node labels, relationships, and properties are suggested.
+## 🔍 Regex Patterns Used
 
-Regex Patterns Used
+The following regex patterns are the core of query context detection:
 
-- /((?=MATCH|OPTIONAL MATCH|MERGE))/gi → Detects Cypher clauses.
+| Regex Pattern | Purpose |
+|---------------|---------|
+| `/(?=MATCH|OPTIONAL MATCH|MERGE)/gi` | Splits query text whenever a new `MATCH`, `OPTIONAL MATCH`, or `MERGE` clause starts. |
+| `/\(\s*\w*\s*:\s*([A-Za-z0-9_]+)/g` | Finds **node labels** inside `(alias:Label)`. |
+| `/\[\s*\w*\s*:\s*([A-Za-z0-9_]+)(?=[\s\]\-]|$)/g` | Finds **relationship types** inside `[alias:TYPE]`. |
+| `/(?:\(\s*\w*\s*:\s*[A-Za-z0-9_]+\s*\{\s*([A-Za-z0-9_]*))|\b([A-Za-z][A-Za-z0-9_]*)\.\s*([A-Za-z0-9_]*)$/` | Detects when user is typing **node properties** (`{ ... }`) or alias-property access (`n.name`). |
+| `/\[\s*\w*\s*:\s*[A-Za-z0-9_]+\s*\{\s*([A-Za-z0-9_]*)$/` | Matches **relationship properties** inside `{ ... }`. |
+| `/\b([A-Za-z][A-Za-z0-9_]*)\.\s*([A-Za-z0-9_]*)$/` | Detects alias-property typing like `a.age`. |
+| `/\(\s*(\w*)\s*:\s*([A-Za-z0-9_]+)/g` | Captures both **alias + label** for nodes `(n:Person)`. |
+| `/\[\s*(\w*)\s*:\s*([A-Za-z0-9_]+)/g` | Captures both **alias + type** for relationships `[r:KNOWS]`. |
 
-- /\(\s*([A-Za-z0-9]*)/ → Detects node variables inside parentheses ( ).
+---
 
-- /\[\s*([A-Za-z0-9]*)/ → Detects relationship variables inside brackets [ ].
+
 
 ## 3. Future Work
 - What can be improved  
