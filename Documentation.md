@@ -46,6 +46,26 @@ RETURN conn.r AS rel, conn.m AS target
 
 ---
 
+### 2.2 Intelligent Cypher Query Completion
+
+This feature enhances the query editor with context-aware Cypher code suggestions, helping users quickly write valid queries based on the Neo4j schema.
+
+Key Features
+
+- Monaco Editor Integration: Provides a rich code editing experience with syntax highlighting and autocompletion.
+
+- Regex-based Context Detection: Determines what the user is currently typing (e.g., inside MATCH, WHERE, or a relationship pattern).
+
+- Schema-driven Suggestions: Autocompletion results are fetched dynamically from the Neo4j schema to ensure only valid node labels, relationships, and properties are suggested.
+
+Regex Patterns Used
+
+- /((?=MATCH|OPTIONAL MATCH|MERGE))/gi → Detects Cypher clauses.
+
+- /\(\s*([A-Za-z0-9]*)/ → Detects node variables inside parentheses ( ).
+
+- /\[\s*([A-Za-z0-9]*)/ → Detects relationship variables inside brackets [ ].
+
 ## 3. Future Work
 - What can be improved  
 - Possible extensions  
