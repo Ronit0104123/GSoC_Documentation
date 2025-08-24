@@ -84,5 +84,10 @@ One major advantage of **IYP-Browser** over the standard **Neo4j Browser** is th
 ---
 
 ## 4. Merged Pull Requests
-- [GitHub Repo](https://github.com/YourUsername/your-repo)  
-- [Documentation](https://yourusername.github.io/your-repo/)  
+The pull requests that have my work and have been merged.
+- [PR #3 - auto-resize editor with max height and scroll ](https://github.com/InternetHealthReport/iyp-browser/pull/3) 
+- [PR #4 - Context‑aware Cypher autocompletion](https://github.com/InternetHealthReport/iyp-browser/pull/4)
+- [PR #6 - Fixes in Cypher autocompletion feature after resolving merge conflicts](https://github.com/InternetHealthReport/iyp-browser/pull/6)
+- [PR #8 - added node expansion feature](https://github.com/InternetHealthReport/iyp-browser/pull/8)
+- [PR #9 - implemented node unexpansion after expansion](https://github.com/InternetHealthReport/iyp-browser/pull/9)
+- [PR #10 - fix re-render on node unexpansion](https://github.com/InternetHealthReport/iyp-browser/pull/10)
