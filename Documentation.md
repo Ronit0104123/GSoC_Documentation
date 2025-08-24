@@ -74,9 +74,12 @@ The following regex patterns are the core of query context detection:
 
 
 ## 3. IYP-BROWSER VS NEO4J BROWSER
-- What can be improved  
-- Possible extensions  
-- Long-term impact  
+One major advantage of **IYP-Browser** over the standard **Neo4j Browser** is the addition of **Intelligent Cypher Query Completion**, which Neo4j Browser does not provide.
+
+### Intelligent Cypher Query Completion
+- In IYP-Browser, the editor suggests **valid node labels, relationship types, and properties** while typing.  
+- Suggestions are **context-aware** (e.g., inside `MATCH`, `WHERE`, or within `{ ... }`) and are fetched dynamically from the **Neo4j schema**.  
+- This means users always get **accurate, schema-driven autocompletion** instead of generic keyword hints.  
 
 ---
 
