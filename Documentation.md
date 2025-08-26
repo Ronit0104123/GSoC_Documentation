@@ -89,6 +89,12 @@ One major advantage of **IYP-Browser** over the standard **Neo4j Browser** is th
 - Suggestions are **context-aware** (e.g., inside `MATCH`, `WHERE`, or within `{ ... }`) and are fetched dynamically from the **Neo4j schema**.  
 - This means users always get **accurate, schema-driven autocompletion** instead of generic keyword hints.  
 
+### Additional Features of IYP-Browser
+- **URL-based Query Execution**  
+  Queries can be executed directly by passing them as URL parameters. This allows easy sharing of query links     and reproducible results.  
+
+- **Embeddable Graph Output**  
+  The query result graph can be exported and embedded as an **iframe component** in other websites or dashboards, enabling seamless integration of IYP-Browser outputs into external tools.
 ---
 
 ## 4. Merged Pull Requests
