@@ -54,20 +54,30 @@ It uses the **Monaco Editor** for code editing and relies on regex-based parsing
 - **Regex-based Context Detection** → Determines if the user is typing a node, relationship, or property.  
 - **Schema-driven Suggestions** → Only valid **labels, relationships, and properties** are suggested from the Neo4j schema.  
 
-## Regex Patterns Used
+## Key Regex Patterns Used
 
-The following regex patterns are the core of query context detection:
+Below are some of the most important regex patterns implemented in this project:
 
-| Regex Pattern | Purpose |
-|---------------|---------|
-| `/\(\s*\w*\s*:\s*([A-Za-z0-9_]+)/g` | Finds **node labels** inside `(alias:Label)`. |
-| `/\[\s*\w*\s*:\s*([A-Za-z0-9_]+)(?=[\s\]\-]|$)/g` | Finds **relationship types** inside `[alias:TYPE]`. |
-| `/(?:\(\s*\w*\s*:\s*[A-Za-z0-9_]+\s*\{\s*([A-Za-z0-9_]*))|\b([A-Za-z][A-Za-z0-9_]*)\.\s*([A-Za-z0-9_]*)$/` | Detects when the user is typing **node properties** inside `{ ... }` or using **alias.property** notation (e.g., `n.name`). |
-| `/\[\s*\w*\s*:\s*[A-Za-z0-9_]+\s*\{\s*([A-Za-z0-9_]*)$/` | Matches **relationship properties** being typed inside `{ ... }`. |
-| `/\b([A-Za-z][A-Za-z0-9_]*)\.\s*([A-Za-z0-9_]*)$/` | Detects **alias-property typing** like `a.age`. |
-| `/\(\s*(\w*)\s*:\s*([A-Za-z0-9_]+)/g` | Captures both **alias + label** for nodes (e.g., `(n:Person)`). |
-| `/\[\s*(\w*)\s*:\s*([A-Za-z0-9_]+)/g` | Captures both **alias + type** for relationships (e.g., `[r:KNOWS]`). |
----
+`\(\s*\w*\s*:\s*([A-Za-z0-9_]+)`  
+- Extracts **node labels** from a Cypher `MATCH` clause, e.g. `(a:Person)` → `Person`.
+
+`\[\s*\w*\s*:\s*([A-Za-z0-9_]+)(?=[\s\]\-]|$)`  
+- Extracts **relationship types** from patterns, e.g. `[r:FRIENDS_WITH]` → `FRIENDS_WITH`.
+
+`\b([A-Za-z][A-Za-z0-9_]*)\.\s*([A-Za-z0-9_]*)$`  
+- Detects **alias.property** being typed, e.g. `n.name` → alias = `n`, property = `name`.
+
+`MATCH\s+(\w+)\s*=\s*\(.*?\)`  
+- Captures **path aliases** in Cypher queries, e.g. `MATCH p = (a)--(b)` → `p`.
+
+`\[\s*\{\s*([A-Za-z0-9_]*)$`  
+- Matches **relationship without type but with properties**, e.g. `[{id: 123}]`.
+
+`\b(\w+)\s+IN\s+relationships\(\s*(\w+)\s*\)`  
+- Captures **relationship alias + path variable**, e.g. `r IN relationships(p)` → `r`, `p`.
+
+`\b(\w+)\s+IN\s+nodes\(\s*(\w+)\s*\)`  
+- Captures **node alias + path variable**, e.g. `n IN nodes(p)` → `n`, `p`.
 
 
 
