@@ -1,3 +1,4 @@
-title: GSoC Documentation
-description: Documentation for my GSoC work
-theme: jekyll-theme-cayman
+title: "GSoC Documentation"
+description: "My Google Summer of Code Documentation"
+theme: minima
+markdown: kramdown
