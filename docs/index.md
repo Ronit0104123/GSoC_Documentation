@@ -54,7 +54,7 @@ It uses the **Monaco Editor** for code editing and relies on regex-based parsing
 - **Regex-based Context Detection** → Determines if the user is typing a node, relationship, or property.  
 - **Schema-driven Suggestions** → Only valid **labels, relationships, and properties** are suggested from the Neo4j schema.  
 
-## Key Regex Patterns Used
+#### Key Regex Patterns Used
 
 Below are some of the most important regex patterns implemented in this project:
 
