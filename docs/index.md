@@ -89,10 +89,13 @@ One major advantage of **IYP-Browser** over the standard **Neo4j Browser** is th
 - This means users always get **accurate, schema-driven autocompletion** instead of generic keyword hints.  
 
 ### URL-based Query Execution
-  - Queries can be executed directly by passing them as URL parameters. This allows easy sharing of query links     and reproducible results.  
+- Queries can be executed directly by passing them as URL parameters.  
+- This allows easy sharing of query links and reproducible results.  
 
 ### Embeddable Graph Output 
-  - The query result graph can be exported and embedded as an iframe component in other websites or dashboards,     enabling seamless integration of IYP-Browser outputs into external tools.
+- The query result graph can be exported and embedded as an **iframe component** in other websites or dashboards.  
+- This enables seamless integration of IYP-Browser outputs into external tools.  
+  
 ---
 
 ## 4. Merged Pull Requests
