@@ -18,9 +18,9 @@ To achieve this, I worked on:
 
 - **Node Expansion/Unexpansion in Graph View** – Allowing users to expand/unexpand nodes dynamically after clicking, enabling deeper exploration of connected data without rerunning queries.  
 
-- **Intelligent Cypher Query Completion** – Implementing context-aware code completion that suggests only valid node properties and relationships, helping users write accurate queries more easily.  
+- **Intelligent Cypher Query Completion** – Implementing context-aware code completion that suggests only valid nodes, relationships, and their respective properties, helping users write accurate queries more easily.  
 
-- **Improved Query Editor Experience** – Enhancing the Cypher editor with auto-adjusting height while maintaining readability by enabling scrolling after a fixed maximum size.  
+- **Improved Query Editor Experience** – Enhancing the Cypher editor with auto-adjusting height according to the cypher query, while maintaining readability by enabling scrolling after a fixed maximum size.  
 
 
 ## 2. Implementation  
