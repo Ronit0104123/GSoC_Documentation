@@ -49,7 +49,7 @@ RETURN conn.r AS rel, conn.m AS target
 This feature enhances the query editor in **IYP-Browser** with **intelligent, context-aware autocompletion** for Cypher queries.  
 It uses the **Monaco Editor** for code editing and relies on regex-based parsing + Neo4j schema data to provide relevant suggestions.
 
-## Key Features
+#### Key Features
 - **Monaco Editor Integration** → Rich editing with syntax highlighting and autocompletion.  
 - **Regex-based Context Detection** → Determines if the user is typing a node, relationship, or property.  
 - **Schema-driven Suggestions** → Only valid **labels, relationships, and properties** are suggested from the Neo4j schema.  
