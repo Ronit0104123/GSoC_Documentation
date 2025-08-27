@@ -37,7 +37,7 @@ WHERE elementId(n) = $nodeId
 MATCH (n)-[r]-(m)
 WITH type(r) AS relType, r, m
 WITH relType, collect({r: r, m: m}) AS connections
-UNWIND connections[..1] AS conn
+UNWIND connections[..1] AS conn // Samples first connection per relationship type
 RETURN conn.r AS rel, conn.m AS target
 ```
 - Added expansion/unexpansion logic in Vue, storing state in expandedNodesMap to track which nodes were expanded and remove only those on unexpansion.
