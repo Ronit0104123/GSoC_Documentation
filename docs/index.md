@@ -50,7 +50,7 @@ This feature enhances the query editor in **IYP-Browser** with **intelligent, co
 It uses the **Monaco Editor** for code editing and relies on regex-based parsing + Neo4j schema data to provide relevant suggestions.
 
 #### Key Features
-- **Regex-based Context Detection** → Determines if the user is typing a node, relationship, or property.  
+- **Regex-based Context Detection** → Determines if the user is typing a node, relationship, or property and other edge cases.  
 - **Schema-driven Suggestions** → Only valid **Node labels, relationships, and properties** are suggested from the Neo4j schema.  
 
 #### Key Regex Patterns Used
