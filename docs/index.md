@@ -12,7 +12,7 @@
 
 ## 1. Project Goals  
 
-The goal of my GSoC project was to enhance the **graph exploration** and **query interface** of the Internet Health Report platform, making it more interactive and user-friendly.  
+The goal of my GSoC project was to enhance the graph exploration and query interface of the Internet Yellow Pages (IYP), making it more interactive and user-friendly.  
 
 To achieve this, I worked on:  
 
